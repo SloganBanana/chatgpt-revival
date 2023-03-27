@@ -33,6 +33,6 @@
     transform: rotate(180deg);
   }
   to {
-    transform: rotate(-36deg);
+    transform: rotate(-360deg);
   }
 }
