@@ -22,7 +22,8 @@ function App() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    try {
+    if (userInput !== '')
+    {try {
       const response = await openai.createCompletion({
         model: "text-davinci-003",
         prompt: userInput,
@@ -44,6 +45,7 @@ function App() {
       console.error("Error:", error);
       setIsLoading(false);
     }
+  }
   };
 
   function replaceWithBr(word) {
